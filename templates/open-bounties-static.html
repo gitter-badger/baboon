@@ -16,7 +16,7 @@
           <li>Misaligned / unintended economic incentives. Flaws in game theory.</li>
           <li>Security weaknesses / attacks on the PoW algorithm.</li>
         </ul>
-        A concrete example could be a contract that consumes very little gas but leads to a lot of computational effort effectively opening the door for DoS attacks. 
+        <p>A concrete example could be a contract that consumes very little gas but leads to a lot of computational effort effectively opening the door for DoS attacks.</p>
         <h3><b>Implementation security</b></h3>
         We will release the genesis block together with our Go client. Please have a look at the references for a link to the code base.
         <h4><b>Client protocol implementation security</b></h4>
@@ -29,7 +29,7 @@
           <li>Message calls.</li>
           <li>Calculation and enforcement of gas and fees.</li>
         </ul>
-        Here is an  <a href="https://en.bitcoin.it/wiki/CVE-2010-5139">example</a> of a potential issue in this category is Bitcoin's "zero-day" flaw requiring a hard-fork.
+        <p>Here is an  <a href="https://en.bitcoin.it/wiki/CVE-2010-5139">example</a> of a potential issue in this category is Bitcoin's "zero-day" flaw requiring a hard-fork.</p>
         <h4><b>Network security</b></h4>
         In this category, we look for generalized attacks on the whole network or a subset of it:
         <ul>
@@ -40,7 +40,7 @@
           <li>Transaction / messages malleability.</li>
           <li>(global) DoS.</li>
         </ul>
-        Here is an <a href="https://en.bitcoin.it/wiki/CVE-2012-4684">example</a> of a global network based DoS scenario.
+        <p>Here is an <a href="https://en.bitcoin.it/wiki/CVE-2012-4684">example</a> of a global network based DoS scenario.</p>
         <h4><b>Node security</b></h4>
         Attacks on a single Go client relating to the Ethereum protocol:
         <ul>
@@ -48,9 +48,10 @@
           <li>Account / wallet address gathering/probing.</li>
           <li>Broadcast / withhold attacks.</li>
         </ul>
-        DoS <a href="https://bitcointalk.org/index.php?topic=287351">example</a>.
-        <br>
-        DoS / Resource abuse <a href="https://en.bitcoin.it/wiki/CVE-2013-2293">example</a>.
+        <p>DoS <a href="https://bitcointalk.org/index.php?topic=287351">example</a>.
+          <br>
+          DoS / Resource abuse <a href="https://en.bitcoin.it/wiki/CVE-2013-2293">example</a>.
+        </p>
         <h4><b>Client application security</b></h4>
         This category addresses more classical security issues. More precisely: Attacks on a single Go client exposing general Go application or library vulnerabilities:
         <ul>
@@ -60,7 +61,7 @@
           <li>Concurrency, e.g. synchronization, state, races.</li>
           <li>Issues related to external libraries used.</li>
         </ul>
-        Here is an : <a href="http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/">example</a> of a problem hidden in an external library.
+        <p>Here is an : <a href="http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/">example</a> of a problem hidden in an external library.</p>
         <h4><b>Cryptographic primitives security</b></h4>
         Incorrect implementation / usage / configuration of:
         <ul>
@@ -68,7 +69,7 @@
           <li>Hash algorithms (Keccak-256).</li>
           <li>Merkle Patricia trees.</li>
         </ul>
-        See here for an EC key generation <a href="http://www.reddit.com/r/Bitcoin/comments/2onm5r/blockchaininfo_security_disclosure/">example</a>. Also have a look <a href="https://github.com/blockchain/My-Wallet/commit/98d5a7ca59ef04d06ac6aee468634b12975a0f5c">here</a>.
+        <p>See here for an EC key generation <a href="http://www.reddit.com/r/Bitcoin/comments/2onm5r/blockchaininfo_security_disclosure/">example</a>. Also have a look <a href="https://github.com/blockchain/My-Wallet/commit/98d5a7ca59ef04d06ac6aee468634b12975a0f5c">here</a>.</p>
       </div>
     </div>
   </section>
