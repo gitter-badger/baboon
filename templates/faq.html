@@ -3,6 +3,22 @@
     <div class="container">
       <div class="row">
         <h1>FAQ</h1>
+        <h3>Good example of a vulnerability submission?</h3>
+        <p>Example of a real issue previously present in the Go client:</p>
+        <p><b>Description:</b> Remote Denial-of-service using non-validated blocks</p>
+        <p><b>Attack scenario:</b> An attacker can send blocks which may require a high amount of computation (the maximum gasLimit) but has no proof-of-work. If the attacker sends blocks continuously, the attacker may force the victim node to a 100% CPU utilization.</p>
+      <p><b>Impact:</b> An attacker can abuse CPU utilization on remote nodes, possibly causing full DoS.</p>
+      <p><b>Components:</b> Go client version v0.6.8 </p>
+      <p><b>Reproduce:</b> Send a block to a Go node which contains many txs but no valid PoW.</p>
+      <p><b>Details:</b><br>
+        Code: <a href="https://github.com/ethereum/go-ethereum/blob/develop/core/block_processor.go#L171">https://github.com/ethereum/go-ethereum/blob/develop/core/block_processor.go#L171</a> (NOTE: this link points to the recent code, not the one with the bug)<br><br>
+        Blocks are validated in the method Process(Block, dontReact). This method performs expensive CPU-intensive tasks, such as executing transactions (sm.ApplyDiff) and afterward it verifies the proof-of-work (sm.ValidateBlock()). This allows an attacker to send blocks which may require a high amount of computation (the maximum gasLimit) but has no proof-of-work. If the attacker sends blocks continuously, the attacker may force the victim node to a 100% CPU utilization.
+        <br><br>
+        <b>Fix</b>: Invert the order of the checks.
+
+        <br>
+      </p>
+
         <h3> So, the bug bounty program is time limited?</h3>
         <p>The program will run until March 6. For a general development time line, please see here <a href="http://instagantt.com/snapshot.html#/54b845c6a88104c84a000097">http://instagantt.com/snapshot.html#/54b845c6a88104c84a000097</a> </p>
         <h3>How are bounties paid out?</h3>
