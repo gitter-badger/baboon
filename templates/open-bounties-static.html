@@ -3,12 +3,12 @@
     <div class="container">
       <div class="row">
         <h1>Open Bounties</h1>
-        Our bug bounty program spans e2e: from soundness of protocols (such as blockchain consensus, wire and p2p, proof of work, ...) and protocol/implementation compliance to network security and consensus integrity. Of course, more classical client security as well as security of cryptographic primitives are also part of the program. Please have a look at <a href="https://github.com/ethereum/wiki/wiki/Security-Categorization">https://github.com/ethereum/wiki/wiki/Security-Categorization</a> for our security goals. For details on the scope, see below. 
+        Our bug bounty program spans e2e: from soundness of protocols (such as the blockchain consensus model, the wire and p2p protocols, proof of work, etc) and protocol/implementation compliance to network security and consensus integrity. Of course, more classical client security as well as security of cryptographic primitives are also part of the program. Please have a look at <a href="https://github.com/ethereum/wiki/wiki/Security-Categorization">https://github.com/ethereum/wiki/wiki/Security-Categorization</a> for our security goals. For details on the scope, see below. 
         <h3><b>Protocol security</b></h3>
-         The idea for Ethereum was initially published in the white paper <a href="https://github.com/ethereum/wiki/wiki/White-Paper">https://github.com/ethereum/wiki/wiki/White-Paper</a>. We have casted this concept into a couple of protocols and algorithms up for scrutiny: 
+         The idea for Ethereum was initially published in the white paper <a href="https://github.com/ethereum/wiki/wiki/White-Paper">https://github.com/ethereum/wiki/wiki/White-Paper</a>. We have cast this concept into a couple of protocols and algorithms up for scrutiny: 
          <ul>
-          <li>Block chain consensus protocol, state engine and virtual machine as well as encodings and Merkle Patricia trees as specified in <a href="http://gavwood.com/Paper.pdf">http://gavwood.com/Paper.pdf</a> </li>
-          <li>Wire and p2p protocol as well as mining algorithm are still undergoing changes. Reference to be published soon here.</li>
+          <li>The blockchain consensus protocol, state engine and virtual machine as well as encodings and Merkle Patricia trees as specified in <a href="http://gavwood.com/Paper.pdf">http://gavwood.com/Paper.pdf</a> </li>
+          <li> The wire and p2p protocols as well as the proof of work algorithm are still undergoing changes. Reference to be published soon here.</li>
         </ul>
         Help us identifying flaws such as  
         <ul>
@@ -20,7 +20,7 @@
         <h3><b>Implementation security</b></h3>
         We will release the genesis block together with our Go client. Please have a look at the references for a link to the code base.
         <h4><b>Client protocol implementation security</b></h4>
-        Assuming, protocols and algorithms are flawless: Do the Go client implementation conform to the formal protocol specification? Issues could include:
+        Assuming that the protocols and algorithms are flawless, does the Go client implementation conform to the formal protocol specification? Issues could include:
         <ul>
           <li>Validations of blocks, transactions and messages.</li>
           <li>Ethereum Virtual Machine code execution.</li>
@@ -52,15 +52,15 @@
         <br>
         DoS / Resource abuse example: <a href="https://en.bitcoin.it/wiki/CVE-2013-2293">https://en.bitcoin.it/wiki/CVE-2013-2293</a>
         <h4><b>Client application security</b></h4>
-        This category address more classical security issues, more precisely, attacks on a single Go client exposing general Go application or library vulnerabilities:
+        This category addresses more classical security issues. More precisely: Attacks on a single Go client exposing general Go application or library vulnerabilities:
         <ul>
-          <li>Memory vulnerability (invalid memory address, nil pointers, memory not properly released).</li>
-          <li>Data type (e.g. integer) overflow / wrap around.</li>
+          <li>Memory vulnerabilities, e.g. invalid memory address, nil pointers, memory not properly released.</li>
+          <li>Data type overflow / wrap around, e.g. integer overflow.</li>
           <li>Panics or not properly handled errors.</li>
-          <li>Concurrency: synchronization, state, races.</li>
+          <li>Concurrency, e.g. synchronization, state, races.</li>
           <li>Issues related to external libraries used.</li>
         </ul>
-        An example for a problem hidden in an external library can be found here: <a href="http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/">http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/</a>
+        An example of a problem hidden in an external library can be found here: <a href="http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/">http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/</a>
         <h4><b>Cryptographic primitives security</b></h4>
         Incorrect implementation / usage / configuration of:
         <ul>
