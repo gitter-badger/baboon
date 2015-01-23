@@ -11,7 +11,7 @@
       <p><b>Components:</b> Go client version v0.6.8 </p>
       <p><b>Reproduce:</b> Send a block to a Go node which contains many txs but no valid PoW.</p>
       <p><b>Details:</b><br>
-  This         <a href="https://github.com/ethereum/go-ethereum/blob/develop/core/block_processor.go#L171">link</a>  points to the recent code, not the one with the bug)<br><br>
+  This <a href="https://github.com/ethereum/go-ethereum/blob/develop/core/block_processor.go#L171">link</a>  points to the recent code, not the one with the bug)<br><br>
         Blocks are validated in the method Process(Block, dontReact). This method performs expensive CPU-intensive tasks, such as executing transactions (sm.ApplyDiff) and afterward it verifies the proof-of-work (sm.ValidateBlock()). This allows an attacker to send blocks which may require a high amount of computation (the maximum gasLimit) but has no proof-of-work. If the attacker sends blocks continuously, the attacker may force the victim node to 100% CPU utilization.
         <br><br>
         <b>Fix</b>: Invert the order of the checks.
