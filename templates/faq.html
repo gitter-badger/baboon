@@ -11,7 +11,7 @@
       <p><b>Components:</b> Go client version v0.6.8 </p>
       <p><b>Reproduce:</b> Send a block to a Go node which contains many txs but no valid PoW.</p>
       <p><b>Details:</b><br>
-        Code: <a href="https://github.com/ethereum/go-ethereum/blob/develop/core/block_processor.go#L171">https://github.com/ethereum/go-ethereum/blob/develop/core/block_processor.go#L171</a> (NOTE: this link points to the recent code, not the one with the bug)<br><br>
+  This         <a href="https://github.com/ethereum/go-ethereum/blob/develop/core/block_processor.go#L171">link</a>  points to the recent code, not the one with the bug)<br><br>
         Blocks are validated in the method Process(Block, dontReact). This method performs expensive CPU-intensive tasks, such as executing transactions (sm.ApplyDiff) and afterward it verifies the proof-of-work (sm.ValidateBlock()). This allows an attacker to send blocks which may require a high amount of computation (the maximum gasLimit) but has no proof-of-work. If the attacker sends blocks continuously, the attacker may force the victim node to 100% CPU utilization.
         <br><br>
         <b>Fix</b>: Invert the order of the checks.
@@ -20,7 +20,7 @@
       </p>
 
         <h3> So, the bug bounty program is time limited?</h3>
-        <p>The program will run until 6th of March. For a general development time line, please see here <a href="http://instagantt.com/snapshot.html#/54b845c6a88104c84a000097">http://instagantt.com/snapshot.html#/54b845c6a88104c84a000097</a> </p>
+        <p>The program will run until 15th of March. For a general development time line, please see <a href="http://instagantt.com/snapshot.html#/54c2ba8d8d78720d160000aa">http://instagantt.com/snapshot.html#/54c2ba8d8d78720d160000aa</a> </p>. Notice that the time line is a snap shot and not continuously updated. 
         <h3>How are bounties paid out?</h3>
         <p>Rewards are paid out in BTC shortly after the end of the bug bounty program in March. Local laws require us to ask for proof of your identity. In addition, we will need your bitcoin address. Rewards for submissions after 28th of February will be paid out at a later date, to be defined.</p>
         <h3>Can I donate my reward to charity?</h3>
