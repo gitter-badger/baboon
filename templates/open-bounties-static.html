@@ -3,11 +3,11 @@
     <div class="container">
       <div class="row">
         <h1>Open Bounties</h1>
-        Our bug bounty program spans e2e: from soundness of protocols (such as the blockchain consensus model, the wire and p2p protocols, proof of work, etc) and protocol/implementation compliance to network security and consensus integrity. Of course, more classical client security as well as security of cryptographic primitives are also part of the program. Please have a look at <a href="https://github.com/ethereum/wiki/wiki/Security-Categorization">https://github.com/ethereum/wiki/wiki/Security-Categorization</a> for our security goals. For details on the scope, see below. 
+        Our bug bounty program spans e2e: from soundness of protocols (such as the blockchain consensus model, the wire and p2p protocols, proof of work, etc) and protocol/implementation compliance to network security and consensus integrity. Of course, more classical client security as well as security of cryptographic primitives are also part of the program. Please have a look at <a href="https://github.com/ethereum/wiki/wiki/Security-Categorization">our security goals</a>. For details on the scope, see below. 
         <h3><b>Protocol security</b></h3>
-         The idea for Ethereum was initially published in the white paper <a href="https://github.com/ethereum/wiki/wiki/White-Paper">https://github.com/ethereum/wiki/wiki/White-Paper</a>. We have cast this concept into a couple of protocols and algorithms up for scrutiny: 
+         The idea for Ethereum was initially published in the <a href="https://github.com/ethereum/wiki/wiki/White-Paper">White Paper</a>. We have cast this concept into a couple of protocols and algorithms up for scrutiny: 
          <ul>
-          <li>The blockchain consensus protocol, state engine and virtual machine as well as encodings and Merkle Patricia trees as specified in <a href="http://gavwood.com/Paper.pdf">http://gavwood.com/Paper.pdf</a> </li>
+          <li>The blockchain consensus protocol, state engine and virtual machine as well as encodings and Merkle Patricia trees as specified in the <a href="http://gavwood.com/Paper.pdf">Yellow Paper</a> </li>
           <li> The wire and p2p protocols as well as the proof of work algorithm are still undergoing changes. Reference to be published soon here.</li>
         </ul>
         Help us identifying flaws such as  
@@ -29,7 +29,7 @@
           <li>Message calls.</li>
           <li>Calculation and enforcement of gas and fees.</li>
         </ul>
-        An example for a potential issue in this category is Bitcoin's "zero-day" flaw requiring a hard-fork: <a href="https://en.bitcoin.it/wiki/CVE-2010-5139">https://en.bitcoin.it/wiki/CVE-2010-5139</a>
+        Here is an  <a href="https://en.bitcoin.it/wiki/CVE-2010-5139">example</a> of a potential issue in this category is Bitcoin's "zero-day" flaw requiring a hard-fork.
         <h4><b>Network security</b></h4>
         In this category, we look for generalized attacks on the whole network or a subset of it:
         <ul>
@@ -40,7 +40,7 @@
           <li>Transaction / messages malleability.</li>
           <li>(global) DoS.</li>
         </ul>
-        For a global network based DoS example look at: <a href="https://en.bitcoin.it/wiki/CVE-2012-4684">https://en.bitcoin.it/wiki/CVE-2012-4684</a>
+        Here is an <a href="https://en.bitcoin.it/wiki/CVE-2012-4684">example</a> of a global network based DoS scenario.
         <h4><b>Node security</b></h4>
         Attacks on a single Go client relating to the Ethereum protocol:
         <ul>
@@ -48,9 +48,9 @@
           <li>Account / wallet address gathering/probing.</li>
           <li>Broadcast / withhold attacks.</li>
         </ul>
-        DoS example: <a href="https://bitcointalk.org/index.php?topic=287351">https://bitcointalk.org/index.php?topic=287351</a>
+        DoS <a href="https://bitcointalk.org/index.php?topic=287351">example</a>.
         <br>
-        DoS / Resource abuse example: <a href="https://en.bitcoin.it/wiki/CVE-2013-2293">https://en.bitcoin.it/wiki/CVE-2013-2293</a>
+        DoS / Resource abuse <a href="https://en.bitcoin.it/wiki/CVE-2013-2293">example</a>.
         <h4><b>Client application security</b></h4>
         This category addresses more classical security issues. More precisely: Attacks on a single Go client exposing general Go application or library vulnerabilities:
         <ul>
@@ -60,7 +60,7 @@
           <li>Concurrency, e.g. synchronization, state, races.</li>
           <li>Issues related to external libraries used.</li>
         </ul>
-        An example of a problem hidden in an external library can be found here: <a href="http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/">http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/</a>
+        Here is an : <a href="http://bitcoinmagazine.com/3668/bitcoin-network-shaken-by-blockchain-fork/">example</a> of a problem hidden in an external library.
         <h4><b>Cryptographic primitives security</b></h4>
         Incorrect implementation / usage / configuration of:
         <ul>
@@ -68,9 +68,7 @@
           <li>Hash algorithms (Keccak-256).</li>
           <li>Merkle Patricia trees.</li>
         </ul>
-        EC key generation example: <a href="http://www.reddit.com/r/Bitcoin/comments/2onm5r/blockchaininfo_security_disclosure/">http://www.reddit.com/r/Bitcoin/comments/2onm5r/blockchaininfo_security_disclosure/</a>
-        <br>
-        (<a href="https://github.com/blockchain/My-Wallet/commit/98d5a7ca59ef04d06ac6aee468634b12975a0f5c">https://github.com/blockchain/My-Wallet/commit/98d5a7ca59ef04d06ac6aee468634b12975a0f5c</a>)
+        See here for an EC key generation <a href="http://www.reddit.com/r/Bitcoin/comments/2onm5r/blockchaininfo_security_disclosure/">example</a>. Also have a look <a href="https://github.com/blockchain/My-Wallet/commit/98d5a7ca59ef04d06ac6aee468634b12975a0f5c">here</a>.
       </div>
     </div>
   </section>
