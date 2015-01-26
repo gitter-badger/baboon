@@ -51,6 +51,8 @@
                         </div>
                         <input type="submit" value="Sign in" class="btn btn-default btn-block" signin-btn/>
                       </form>
+                      
+                      <a class="text-right forgot-password" data-toggle="modal" data-target="#forgot-password-modal">Forgot your password?</a>
                       <div class="text-center">
                         <strong>Or</strong>
                       </div>
@@ -65,4 +67,6 @@
       </div>
     </div>
   </nav>
+
+  {{> forgotPasswordModal}}
 </template>

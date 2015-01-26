@@ -1,5 +1,6 @@
 UI = {
   setTextFeedback: function(primaryText, secondaryText, opts){
+    opts = opts||{};
     if(!primaryText){
       Session.set("uiTextFeedback");
     }else{
