@@ -5,7 +5,6 @@ AdminConfig = {
     skin: "blue"
   },
   collections: {
-    Users: {},
     Badges: {},
     Vulnerabilities: {
       tableColumns: [{
