@@ -2,6 +2,14 @@ Router.route("/", function(){
   this.render("homePage");
 }, { name: "home" });
 
+Router.route("/alert0", function(){
+  this.render("alert0");
+}, { name: "alert0" });
+
+Router.route("/alerts", function(){
+  this.render("secPage");
+}, { name: "sec" });
+
 Router.route("/vulnerability/new", function(){
   this.render("newVulnerabilityPage");
 }, { name: "newVulnerability" });
