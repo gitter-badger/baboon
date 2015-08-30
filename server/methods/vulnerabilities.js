@@ -10,7 +10,8 @@ Meteor.methods({
       if(Vulnerabilities.find({user: this.userId, accepted: false}).count() >= max){
         throw new Meteor.Error("max-submissions","Maximum number of pending submissions reached");
       }
-      
+      doc.title = s.stripTags(doc.title);
+      doc.description = s.stripTags(doc.description);
       return Vulnerabilities.insert(_.extend(doc, {
         user: this.userId,
         createdAt: new Date()
