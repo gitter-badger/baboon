@@ -14,7 +14,7 @@
               </div>
               <div class="points">{{score}} pts</div>
               <div class="date-reported"><b>Reported: </b>{{createdAt}}</div>
-              <div class="description"><p>{{description}}</p></div>
+              <div class="description"><p>{{#markdown}} {{description}} {{/markdown}}</p></div>
             </div>
           {{/each}}
         </div>
