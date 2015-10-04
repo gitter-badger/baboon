@@ -1,4 +1,6 @@
 # Baboon
+
+[![Join the chat at https://gitter.im/ethereum/baboon](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereum/baboon?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Bounty program site for Ethereum
 
 ## Quick start:
